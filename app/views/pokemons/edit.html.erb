@@ -1,0 +1,69 @@
+<h1>Edit article</h1>
+
+<%= form_with(model: @pokemons, local: true) do |form| %>
+
+  <p>
+    <%= form.label :num %><br>
+    <%= form.text_field :num %>
+  </p>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </p>
+
+  <p>
+    <%= form.label :img %><br>
+    <%= form.text_area :img %>
+  </p>
+
+  <p>
+    <%= form.label :height %><br>
+    <%= form.text_area :height %>
+  </p>
+
+  <p>
+    <%= form.label :weight %><br>
+    <%= form.text_area :weight %>
+  </p>
+
+  <p>
+    <%= form.label :candy %><br>
+    <%= form.text_area :candy %>
+  </p>
+
+  <p>
+    <%= form.label :candy_count %><br>
+    <%= form.text_area :candy_count %>
+  </p>
+
+  <p>
+    <%= form.label :egg %><br>
+    <%= form.text_area :egg %>
+  </p>
+
+  <p>
+    <%= form.label :avg_spawns %><br>
+    <%= form.text_area :avg_spawns %>
+  </p>
+
+  <p>
+    <%= form.label :spawn_time %><br>
+    <%= form.text_area :spawn_time %>
+  </p>
+
+  <p>
+    <%= form.label :created_at %><br>
+    <%= form.text_area :created_at %>
+  </p>
+
+  <p>
+    <%= form.label :updated_at %><br>
+    <%= form.text_area :updated_at %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
