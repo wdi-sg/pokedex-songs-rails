@@ -20,7 +20,7 @@ rails db:create
 ```
 5. Generate a model for `pokemon` and specify the *table attributes*
 ```
-rails g model Pokemon
+rails g model pokemon
 ```
 
 Table attibutes (that you add onto the above command) should look something like:
@@ -33,7 +33,7 @@ Just make all of the pokemon columns type text or string.
 
 Sample command with the table attributes:
 ```
-rails g model Article title:string text:text
+rails g model article title:string text:text
 ```
 
 
