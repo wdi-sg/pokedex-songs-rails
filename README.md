@@ -46,6 +46,12 @@ rails db:migrate
 rails db:seed
 ```
 
+## Add the pokemon master
+
+Create a `pokemon master` model that `belongs_to` one pokemon.
+
+Create all of the normal routes for that `master` model: `resources :master`
+
 ## Deliverables
 
 The deliverable is an app that has CRUD functionality on pokemon.
@@ -63,51 +69,34 @@ The deliverable is an app that has CRUD functionality on pokemon.
 
 Refer to the gitbook materials for relevant commands and examples: https://wdi-sg.github.io/gitbook-2018/06-ruby-rails/rails-intro/readme.html
 
+When you start to implement the 2nd model it will be helpful to have some data in `seed.rb`.
+
 ### Bonus:
+- Create the full nested crud routes for the related `master` model.
 - Change your data model by adding a migration. (Look up the rails docs for running a `change table` migration.)
-- Add a pokemon master who will `have many` pokemon. (This is different from a logged in user / you won't need login capability)
-- You can change the seed file as well to have a seed master who has pokemon, or you can start with an empty db.
-- Use nested routes to refer to the pokemons and their masters.
 
 ## Tired of Pokemon yet?
-You can also build a rails app that tracks and displays parks:
+You can also build a rails app that tracks and displays songs and song genres:
 
+#### "Sortify" - Rails Associations (with Postgres SQL)
 
-#### National Parks
+For this exercise, we'll create a "Sortify" Rails app which stores songs.
 
-Beginning with the first Tree Planting Campaign in 1963, At National Parks Board (NParks) has come a long way in greening up our island city, with 4 nature reserves and more than 300 parks sprawled across Singapore to date and still growing.  
+#### Deliverables
+* Create a model for `genre` with name and description
 
-Let's create an app to showcase these wonderful parks.
+* Create a model for `songs` with name and genre
 
-#### Getting Started
+* The associations are as follows:
+  - Genre has_many Songs
+  - Song belongs_to a Genre
 
-*   Fork and clone this repository
-*   Follow the recommended process for creating your Rails app.
-
-#### Components
-
-#### Models
-
-*   A `Park` model that stores the following attributes. Choose the appropriate data types for each (`string` or `text`)
-*   `name`
-*   `description`
-*   `picture` (for now, have this store a URL to a picture of a park)
-
-#### Controllers
-
-*   A controller for your home page
-*   A controller for your `Park` model
-
-#### Routes and Views
-
-| route             | description                    | controller | action/view      |
-| ----------------- | ------------------------------ | ---------- | ---------------- |
-| GET /             | Your home page                 | home       | index            |
-| GET /parks        | list all parks                 | parks      | index            |
-| GET /parks/new    | show add park form             | parks      | new              |
-| POST /parks       | create park                    | parks      | create (no view) |
-| GET /parks/1      | list park (id=1)               | parks      | show             |
-| GET /parks/2/edit | show edit park form (id=2)     | parks      | edit             |
-| PUT /parks/3      | update an existing park (id=3) | parks      | update (no view) |
-| DELETE /parks/3   | delete an existing park (id=3) | parks      | destroy (no view)|
-
+* Implement controllers and views for:
+  - show all genres `/genres/`
+  - show all songs from one genre `/genres/:id/songs/`
+    
+### Bonus:
+- Create the full nested crud routes for the related `song` model.
+- Change your data model by adding a migration. (Look up the rails docs for running a `change table` migration.)
+  
+  
