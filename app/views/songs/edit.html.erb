@@ -1,0 +1,14 @@
+<%= form_with model: @song do |f| %>
+
+  <div>
+    <%= f.collection_select :genre_id, @genres, :id, :name, { prompt: 'Select Genre' } %>
+  </div>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
