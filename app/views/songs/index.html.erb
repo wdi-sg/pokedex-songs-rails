@@ -1,0 +1,15 @@
+<h1>List of Songs under Genre: <%= @genre.name %></h1>
+
+<% @songs.each do |s| %>
+  <h3>
+    ID: <%= s.id %> |
+    Name: <%= s.name %>
+    <%= link_to 'Edit', edit_song_path(s.id) %>
+    <%= link_to 'Delete', song_path(s.id), method: :delete, data: { confirm: 'Are You Sure?' } %>
+  </h3>
+
+  <br  />
+<% end %>
+
+<br  />
+<%= link_to 'Back', root_path %>

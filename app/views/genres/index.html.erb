@@ -1,0 +1,10 @@
+<h1>Genre Index</h1>
+<h3><%= link_to 'New Genre', new_genre_path %></h3>
+<h3><%= link_to 'New Song', new_song_path %></h3>
+
+<% @genres.each do |g| %>
+  <h3>Name: <%= link_to g.name, genre_songs_path(genre_id: g.id) %></h3>
+  <h3>Description: <%= g.description %></h3>
+
+  <br />
+<% end %>
