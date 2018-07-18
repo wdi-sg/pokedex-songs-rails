@@ -1,0 +1,11 @@
+<h1>Masters!</h1>
+
+<% if @pokemon %>
+Pokemon: <%= @pokemon.name %><br>
+<%= image_tag @pokemon.img %><br>
+(this only shows if there is a pokemon_id params)<br><br><br><br>
+<% end %>
+
+<% @masters.each do |master| %>
+<div>Owner: <%= master.name %> , id: <%= master.id %></div>
+<% end %>

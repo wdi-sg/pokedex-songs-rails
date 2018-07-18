@@ -1,0 +1,21 @@
+<h1>All Pokemons</h1>
+
+<%= link_to 'New Pokemon', new_pokemon_path %><br><br>
+
+ <table>
+  <tr>
+    <th>Num</th>
+    <th>Name</th>
+    <th></th>
+  </tr>
+
+  <% @pokemons.each do |pokemon| %>
+    <tr>
+      <td><%= pokemon.num %></td>
+      <td><%= pokemon.name %></td>
+      <td><%= link_to 'Show', pokemon_path(pokemon) %></td>
+      <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+      <td><%= link_to 'Delete', pokemon_path(pokemon), method: :delete, data: { confirm: 'Are You Sure???'} %></td>
+    </tr>
+  <% end %>
+</table>

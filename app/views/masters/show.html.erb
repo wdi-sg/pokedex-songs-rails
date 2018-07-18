@@ -1,0 +1,9 @@
+<h1>The Master</h1>
+
+Master's Name: <%= @master.name %><br>
+Pokemon's Name: <%= @master.pokemon.name %><br>
+<%= image_tag @master.pokemon.img %><br>
+
+<%= link_to 'Edit', edit_master_path(@master) %><br>
+
+<%= link_to 'Back', masters_path %>
