@@ -1,0 +1,22 @@
+<h1>Edit Master</h1>
+
+<%= form_with model: @master, url: master_path do |form| %>
+
+  
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+    
+    <%= form.collection_select :pokemon_id, @pokemons, :id, :name %>
+
+    <p>
+      <%= form.submit %>
+    </p>
+
+    <p><%= link_to 'Destroy', master_path,
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+    </p>
+
+  <% end %>

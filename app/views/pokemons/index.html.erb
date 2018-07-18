@@ -1,0 +1,18 @@
+<h1>Pokedex</h1>
+
+
+
+<table>
+  <tr>
+    <th>Num</th>
+    <th>Name</th>
+    <th></th>
+  </tr>
+
+  <% @pokemons.each do |pokemon| %>
+    <tr>
+      <td><%= pokemon.id %></td>
+      <td><%= pokemon.name %></td>
+    </tr>
+  <% end %>
+</table>
