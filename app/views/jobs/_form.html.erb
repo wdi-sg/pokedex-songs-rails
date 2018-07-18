@@ -1,0 +1,17 @@
+<%= form_with(model: [@character, @character.jobs.build ], local: true) do |form| %>
+<p>
+    <%= form.label :job_name %><br>
+    <%= form.text_field :job_name %>
+</p>
+<p>
+    <%= form.label :job_level %><br>
+    <%= form.text_field :job_level %>
+</p>
+<p>
+    <%= form.label :job_img %><br>
+    <%= form.text_field :job_img %>
+</p>
+<p>
+    <%= form.submit class: "waves-effect waves-light btn deep-purple lighten-3" %>
+</p>
+<% end %>
