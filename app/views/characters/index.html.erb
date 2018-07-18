@@ -1,0 +1,27 @@
+<h1>Listing Characters</h1>
+
+<%# <%= link_to 'Create new class', new_crafter_path, class: "waves-effect waves-light btn green" %> 
+
+<table class="highlight centered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Item Level</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @character.each do |character| %>
+      <tr>
+        <td><h5><%= character.name %></h5></td>
+        <td><%= character.level %></td>
+        <td><%= character.ilvl %></td>
+        <td><%= link_to 'View', character_path(character), class: "waves-effect waves-light btn blue" %></td>
+        <td><%= link_to 'Edit', edit_character_path(character), class: "waves-effect waves-light btn blue" %></td>
+        <%# <td><%= link_to 'Destroy', crafter_path(character), method: :delete, data: { confirm: 'Are you sure?' }, class: "waves-effect waves-light btn red"  %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
