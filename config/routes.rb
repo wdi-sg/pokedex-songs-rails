@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :pokemons
+  # resources :pokemons
 
-  root 'pokemons#index'
+  # root 'pokemons#index'
 
   resources :pokemons do
     resources :master
@@ -9,3 +9,4 @@ Rails.application.routes.draw do
   resources :master
 
 end
+

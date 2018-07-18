@@ -1,0 +1,9 @@
+<% @masters.each do |master| %>
+	<p>
+		name: <%= master.name %>
+
+		<%= link_to 'Destroy', master_path(master),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+	</p>
+<% end %>

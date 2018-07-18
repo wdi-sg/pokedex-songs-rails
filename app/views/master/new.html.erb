@@ -1,7 +1,21 @@
 <%= form_with scope: :master, url: master_path, local: true do |form| %>
 
-  <%= form.collection_select :pokemon_id, @pokemons, :id, :name %>
 
+  <%= form.collection_select :pokemon_id, @pokemons, :id, :name %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= form_with scope: :master, url: masters_path, local: true do |form| %>
+
+
+  <%= form.collection_select :pokemon_id, @pokemons, :id, :name %>
   <p>
     <%= form.label :name %><br>
     <%= form.text_area :name %>
