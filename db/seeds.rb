@@ -1,3 +1,13 @@
+# ------ created a model route that points to the database --------#
+
+# rails g model pokemons num:integer name:string img:string height:string weight:string candy:string candy_count:string egg:string avg_spawns:string spawn_time:string
+
+# ------ create and migrate --------#
+# `rails db:create`
+# `rails db:migrate`
+# `rails db:seed`
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -6,7 +16,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#clear the table before we seed
 Pokemon.destroy_all
 
 json = ActiveSupport::JSON.decode(File.read('db/pokedex.json'))

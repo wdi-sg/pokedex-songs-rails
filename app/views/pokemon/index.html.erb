@@ -1,0 +1,14 @@
+<h1>Pokedex</h1>
+
+<p>Click here to create a new pokemon <%=link_to 'New', new_pokemon_path %><br></p></br>
+
+<table>
+    <% @pokemons.each do |pokemon| %>
+        <tr>
+            <td><%= pokemon.num %></td>
+            <td><%= pokemon.name %></td>
+            <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+            <td><%= link_to 'Delete', pokemon_path(pokemon), method: :delete %></td>
+        </tr>
+    <% end %>
+</table>
