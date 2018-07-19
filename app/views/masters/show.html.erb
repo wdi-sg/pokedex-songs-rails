@@ -1,0 +1,13 @@
+<h1>Master</h1>
+
+<p><%= image_tag(@master.img, height: '100', width: '100')%></p>
+Master's Name: <%= @master.name %><br>
+Pokemon's Name: <%= @master.pokemon.name %><br><br>
+
+<%= image_tag(@master.pokemon.img, size: "100x100") %><br><br>
+
+<%= link_to 'Edit', edit_master_path(@master) %><br>
+
+<%= link_to 'Delete', master_path(@master), method: :delete, data: { confirm: 'Are You Sure?'} %><br>
+
+<%= link_to 'Back', masters_path %>

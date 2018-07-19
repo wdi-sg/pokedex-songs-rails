@@ -1,0 +1,21 @@
+<h1>POKEDEX, Girls!</h1>
+
+<%= link_to 'Create a New Pokemon', new_pokemon_path %><br><br>
+
+ <table>
+  <tr>
+    <th>Num</th>
+    <th>Name</th>
+  </tr>
+
+  <% @pokemons.each do |pokemon| %>
+    <tr>
+      <td><%= pokemon.num %></td>
+      <td><%= link_to pokemon.name, pokemon_path(pokemon) %></td>
+      <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+      <td><%= link_to 'Delete', pokemon_path(pokemon), 
+      method: :delete, 
+      data: { confirm: 'Are You Sure You Want to Delete?'} %></td>
+    </tr>
+  <% end %>
+</table>

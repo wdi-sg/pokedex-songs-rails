@@ -1,0 +1,23 @@
+<h1>SHALL WE BEGIN!</h1>
+
+
+<%= form_with scope: :master, url: masters_path, local: true do |form| %>
+
+<h2>Please Pick A Starter Pokemon</h2>
+  <%= form.collection_select :pokemon_id, @pokemons, :id, :name %>
+
+   <p>
+    <%= form.label :img %><br>
+    <%= form.text_area :img %>
+  </p>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

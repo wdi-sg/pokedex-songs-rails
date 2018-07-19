@@ -1,0 +1,27 @@
+<h1>Pokemon</h1>
+
+<p><%= image_tag(@pokemon.img, height: '100', width: '100')%></p>
+Num: <%= @pokemon.num %><br>
+Name: <%= @pokemon.name %><br>
+Img: <%= @pokemon.img %><br>
+Weight: <%= @pokemon.weight %><br>
+Height: <%= @pokemon.height %><br>
+Candy: <%= @pokemon.candy %><br>
+Candy Count: <%= @pokemon.candy_count %><br>
+Egg: <%= @pokemon.egg %><br>
+Avg Spawns: <%= @pokemon.avg_spawns %><br>
+Spawn Time: <%= @pokemon.spawn_time %><br>
+Created At: <%= @pokemon.created_at %><br><br>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %><br><br>
+
+<%= link_to 'Delete', pokemon_path(@pokemon), method: :delete, data: { confirm: 'Are You Sure?'} %><br><br>
+
+<%= link_to 'Home', pokemons_path%><br>
+
+<% if @pokemon.master.size > 0 %>
+<h3>List of Masters</h3>
+	<% @pokemon.master.each do |master| %>
+	<div>Master: <%= master.name %> , ID: <%= master.id %></div>
+	<% end %>
+<% end %>
