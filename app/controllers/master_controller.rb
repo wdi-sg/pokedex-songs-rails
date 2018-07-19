@@ -12,7 +12,7 @@ class MasterController < ApplicationController
   def show
     @masters = Master.find(params[:id])
     #cases when trying to get a master for the pokemon that does not exist
-    
+
     if(parmams[:pokemon_id].to_i != @master.pokemon.id)
       puts "master does not exists"
     end
@@ -52,4 +52,4 @@ class MasterController < ApplicationController
     params.require(:master).permit(:name, :pokemon_id)
   end
 
-end
+end  
