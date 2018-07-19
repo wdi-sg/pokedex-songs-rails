@@ -8,7 +8,7 @@ Create new pokemaster  <%= link_to 'New', new_master_path%><br>
     <th>Pokemon</th>
   </tr>
 
-    <% @masters.each do |master| %>
+    <% @masters.each do |master| %>   
         <tr>
             <td><%= master.name %> : </td>
             <td><%= master.pokemon.name %></td>
