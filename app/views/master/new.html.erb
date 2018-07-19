@@ -1,0 +1,18 @@
+<h1>Pokedex</h1>
+
+<p>Register new pokemaster</p>
+
+<%= form_with scope: :master, url: master_index_path, local: true do |form| %>
+  
+  <%= form.collection_select :pokemon_id, @pokemons, :id, :name %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  
+  <p>
+  <%= form.submit %>
+  </p>
+
+<% end %>
