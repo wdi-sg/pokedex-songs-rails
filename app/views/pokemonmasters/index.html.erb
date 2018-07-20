@@ -1,6 +1,8 @@
+<%= image_tag 'banner.jpg', class:"banner"%>
+
 <h1>Welcome to Pokedex!</h1>
 
   <% @pokemonmaster.each do |pokemonmaster| %>
-      <li><%= pokemonmaster.name %></li>
+      <li>Pokemon masters: <%= pokemonmaster.name %></li>
       <br/>  
   <% end %>

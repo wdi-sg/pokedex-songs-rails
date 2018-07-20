@@ -8,6 +8,7 @@ class PokemonmastersController < ApplicationController
    end
  
    def new
+    @pokemons = Pokemon.all
    end
 
    def create
@@ -28,6 +29,6 @@ class PokemonmastersController < ApplicationController
    private
 
    def pokemonmaster_params
-     params.require(:pokemonmasters).permit(:name)
+     params.require(:pokemonmasters).permit(:name, :pokemon_id)
    end
 end

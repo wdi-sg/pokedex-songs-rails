@@ -25,3 +25,5 @@ json['pokemon'].each do |item|
   new_pokemon.spawn_time = item['spawn_time']
   new_pokemon.save
 end
+
+tom = Pokemonmaster.create(:name => "tom")

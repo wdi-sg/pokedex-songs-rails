@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   
   resources :pokemonmasters
 
-  root "pokemonmaster#index"
+  root "pokemonmasters#index"
 
 end

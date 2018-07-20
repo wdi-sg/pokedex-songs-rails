@@ -1,3 +1,3 @@
 class Pokemon < ApplicationRecord
-   has_many :pokemonmaster
+   has_many :pokemonmasters
 end
