@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :pokemon do
-    resources :pokemonmaster
+  resources :pokemons do
+    resources :pokemonmasters
   end
   
-  resources :pokemonmaster
+  resources :pokemonmasters
 
   root "pokemonmaster#index"
 

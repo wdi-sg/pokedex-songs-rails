@@ -11,7 +11,6 @@ class PokemonsController < ApplicationController
    end
 
    def create
-      puts params
       @pokemons = Pokemon.new(pokemons_params)
       @pokemons.save
       redirect_to @pokemons
