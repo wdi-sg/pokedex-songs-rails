@@ -1,0 +1,20 @@
+<h1>Pokemasters</h1>
+
+Create new pokemaster  <%= link_to 'New', new_master_path%><br>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Pokemon</th>
+  </tr>
+
+    <% @masters.each do |master| %>   
+        <tr>
+            <td><%= master.name %> : </td>
+            <td><%= master.pokemon.name %></td>
+            <td><%= link_to 'Edit', edit_master_path(master)%></td>
+            <td><%= link_to 'Delete', master_path(master), method: :delete %></td>
+        </tr>
+    <% end %>
+
+</table>
