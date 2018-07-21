@@ -1,0 +1,11 @@
+<h1>POKEDEX APP</h1>
+
+<%= image_tag(@pokemon.img, :alt => "IMAGE") %>
+<h2><%= @pokemon.name %><h2>
+<h2>num: <%= @pokemon.num %></h2>
+<h2>height: <%= @pokemon.height %></h2>
+<h2>weight: <%= @pokemon.weight %></h2>
+<br>
+<%= button_to "Edit Pokemon", edit_pokemon_path(@pokemon), method: :get %>
+<br>
+<%= button_to "Delete Pokemon", pokemon_path(@pokemon), method: :delete, data: {confirm: 'Delete Pokemon?'} %>

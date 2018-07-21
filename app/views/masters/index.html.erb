@@ -1,0 +1,13 @@
+<h1>MASTERS FOR POKEDEX</h1>
+
+<% if @pokemon %>
+<h1>Viewing: <%= @pokemon[:name] %><br>
+<%= image_tag @pokemon[:img] %>
+<% end %>
+
+<h2><%= link_to "New Master", new_master_path %></h2>
+
+<h3>Select master</h3>
+<% @masters.each_with_index do |master, index| %>
+    <%= index + 1 %>. <%= link_to master[:name], master_path(master) %></br>
+<% end %>

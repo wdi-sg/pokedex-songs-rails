@@ -1,0 +1,9 @@
+<h1>POKEDEX APP</h1>
+
+<h2>Name: <%= @master.name %><h2>
+<h2>Pokemon: <%= @pokemon.name %></h2>
+<%= image_tag  @pokemon.img %>
+<br>
+<%= button_to "Edit Master", edit_master_path(@master), method: :get %>
+<br>
+<%= button_to "Delete Master", master_path(@master), method: :delete, data: {confirm: 'Delete Master?'} %>

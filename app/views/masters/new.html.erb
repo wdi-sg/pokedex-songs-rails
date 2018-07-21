@@ -1,0 +1,14 @@
+<h1>Join us as a Master</h1>
+<%= form_with scope: :master, url: masters_path, local: true do |f| %>
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        <%= f.label :pick_a_pokemon %><br>
+        <%= f.collection_select :pokemon_id, @pokemons, :id, :name %><br>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>

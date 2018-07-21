@@ -1,0 +1,26 @@
+<h1>Create a new Pokemon</h1>
+<%= form_for :pokemon, url: pokemons_path do |f| %>
+    <p>
+        <%= f.label :num %><br>
+        <%= f.text_field :num %>
+    </p>
+    <p>
+        <%= f.label :name%><br>
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        <%= f.label :img %><br>
+        <%= f.text_field :img %>
+    </p>
+    <p>
+        <%= f.label :height %><br>
+        <%= f.text_field :height %>
+    </p>
+    <p>
+        <%= f.label :weight %><br>
+        <%= f.text_field :weight %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>Editing <%= @master.name %></h1>
+<%= form_for :master, url: master_path(@master), method: :put do |f| %>
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        <%= f.label :pick_a_pokemon %><br>
+        <%= f.collection_select :pokemon_id, @pokemons, :id, :name %><br>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
